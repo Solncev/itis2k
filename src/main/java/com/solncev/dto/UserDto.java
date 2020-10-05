@@ -1,20 +1,22 @@
 package com.solncev.dto;
 
 public class UserDto {
-    private String firstName;
+    private String login;
+    private String name;
     private String lastName;
 
-    public UserDto(String firstName, String lastName) {
-        this.firstName = firstName;
+    public UserDto(String login, String name, String lastName) {
+        this.login = login;
+        this.name = name;
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLastName() {
@@ -23,5 +25,13 @@ public class UserDto {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 }

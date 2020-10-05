@@ -4,13 +4,15 @@
 <#macro content>
 <table>
     <tr>
+        <th>Login</th>
         <th>Firstname</th>
         <th>Lastname</th>
     </tr>
     <#if users??>
         <#list users as user>
             <tr>
-                <td>${user.firstName}</td>
+                <td>${user.login}</td>
+                <td>${user.name}</td>
                 <td>${user.lastName}</td>
             </tr>
         </#list>
