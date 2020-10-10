@@ -1,7 +1,8 @@
 package com.solncev.servlets;
 
+import com.solncev.dto.UserDto;
 import com.solncev.models.User;
-import com.solncev.service.Service;
+import com.solncev.service.UserService;
 import com.solncev.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
@@ -15,11 +16,11 @@ import java.util.List;
 @WebServlet(name = "userServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
 
-    private final Service userService = new UserServiceImpl();
+    private final UserService userService = new UserServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> users = userService.getAll();
+        List<UserDto> users = userService.getAll();
         req.setAttribute("users", users);
         req.getRequestDispatcher("page.ftl").forward(req, resp);
     }

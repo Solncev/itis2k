@@ -52,7 +52,7 @@ public class UserDaoImpl implements Dao<User> {
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.setString(3, user.getName());
             preparedStatement.setString(4, user.getLastname());
-            preparedStatement.executeUpdate(sql);
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
