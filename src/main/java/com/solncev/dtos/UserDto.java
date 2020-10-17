@@ -1,4 +1,4 @@
-package com.solncev.dto;
+package com.solncev.dtos;
 
 public class UserDto {
     private String login;

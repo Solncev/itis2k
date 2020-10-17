@@ -1,9 +1,9 @@
 package com.solncev.servlets;
 
-import com.solncev.dto.UserDto;
+import com.solncev.dtos.UserDto;
 import com.solncev.models.User;
-import com.solncev.service.UserService;
-import com.solncev.service.impl.UserServiceImpl;
+import com.solncev.services.UserService;
+import com.solncev.services.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +26,7 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = new User(
                 req.getParameter("login"),
                 req.getParameter("password"),

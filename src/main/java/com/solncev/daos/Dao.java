@@ -1,4 +1,4 @@
-package com.solncev.dao;
+package com.solncev.daos;
 
 import java.util.List;
 

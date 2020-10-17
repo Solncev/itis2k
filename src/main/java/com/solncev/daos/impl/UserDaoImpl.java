@@ -1,7 +1,6 @@
-package com.solncev.dao.impl;
+package com.solncev.daos.impl;
 
-import com.solncev.dao.Dao;
-import com.solncev.helpers.PostgresConnectionHelper;
+import com.solncev.daos.Dao;
 import com.solncev.models.User;
 
 import java.sql.*;
@@ -10,7 +9,11 @@ import java.util.List;
 
 public class UserDaoImpl implements Dao<User> {
 
-    private final Connection connection = PostgresConnectionHelper.getConnection();
+    private final Connection connection;
+
+    public UserDaoImpl(Connection connection) {
+        this.connection = connection;
+    }
 
     @Override
     public User get(int id) {

@@ -1,6 +1,6 @@
-package com.solncev.service;
+package com.solncev.services;
 
-import com.solncev.dto.UserDto;
+import com.solncev.dtos.UserDto;
 import com.solncev.models.User;
 
 import java.util.List;

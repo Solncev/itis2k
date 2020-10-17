@@ -1,17 +1,18 @@
-package com.solncev.service.impl;
+package com.solncev.services.impl;
 
-import com.solncev.dao.Dao;
-import com.solncev.dao.impl.UserDaoImpl;
-import com.solncev.dto.UserDto;
+import com.solncev.daos.Dao;
+import com.solncev.daos.impl.UserDaoImpl;
+import com.solncev.dtos.UserDto;
 import com.solncev.helpers.PasswordHelper;
+import com.solncev.helpers.PostgresConnectionHelper;
 import com.solncev.models.User;
-import com.solncev.service.UserService;
+import com.solncev.services.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
-    private final Dao<User> dao = new UserDaoImpl();
+    private final Dao<User> dao = new UserDaoImpl(PostgresConnectionHelper.getConnection());
 
     @Override
     public List<UserDto> getAll() {

@@ -14,6 +14,6 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter writer = resp.getWriter();
         String name = req.getParameter("name");
-        writer.println(String.format("Hello %s", name));
+        writer.print(String.format("Hello, %s!", name));
     }
 }
