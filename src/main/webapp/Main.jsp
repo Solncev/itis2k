@@ -12,6 +12,8 @@
 </head>
 <body>
 <%
+
+    // session case
     String user = null;
     String sessionUser = (String) session.getAttribute("username");
     if (sessionUser == null) {
@@ -20,6 +22,8 @@
         user = sessionUser;
     }
 
+
+    // cookie case
     String userName = null;
     String sessionId = null;
     Cookie[] cookies = request.getCookies();
